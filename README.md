@@ -1,4 +1,4 @@
-﻿# Web Chat Demo
+﻿# Web Chat
 
 FastAPI와 WebSocket으로 만든 아주 간단한 실시간 채팅 예제입니다.
 
