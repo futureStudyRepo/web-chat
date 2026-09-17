@@ -12,7 +12,7 @@ FastAPI와 WebSocket으로 만든 아주 간단한 실시간 채팅 예제입니
 ## 폴더 구조
 
 ```text
-web-chat-demo/
+web-chat/
   app/
     main.py
     chat_manager.py
