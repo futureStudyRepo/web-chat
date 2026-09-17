@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Chat Demo</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='app.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <section class="intro">
+      <p class="eyebrow">FastAPI + WebSocket</p>
+      <h1>Web Chat Demo</h1>
+      <p class="copy">닉네임으로 입장해서 같은 페이지를 보고 있는 다른 사용자와 실시간으로 대화하는 최소 채팅 예제입니다.</p>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>연결</h2>
+          <p id="connection-status" class="status-chip offline">오프라인</p>
+        </div>
+
+        <label class="field-label" for="nickname">닉네임</label>
+        <input id="nickname" class="text-input" placeholder="예: alex">
+
+        <div class="button-row">
+          <button id="connect-button" type="button">채팅 시작</button>
+          <button id="disconnect-button" type="button" class="secondary">연결 종료</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>접속자</h2>
+        </div>
+        <ul id="user-list" class="user-list"></ul>
+      </div>
+    </section>
+
+    <section class="chat-layout">
+      <div class="panel chat-panel">
+        <div id="message-list" class="message-list"></div>
+      </div>
+
+      <div class="panel composer-panel">
+        <label class="field-label" for="message-input">메시지</label>
+        <textarea id="message-input" class="text-area" placeholder="메시지를 입력해 주세요."></textarea>
+        <button id="send-button" type="button">보내기</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', path='app.clean.js') }}"></script>
+</body>
+</html>
